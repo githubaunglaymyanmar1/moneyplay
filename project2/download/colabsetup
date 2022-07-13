@@ -1,0 +1,15 @@
+in colab code
+
+#@title scrippting
+!apt install sshpass screen -y &> /dev/null
+!screen -m -d -S clean sshpass -p 'xfce4' ssh xfce@aungmyozaw.duckdns.org -o StrictHostKeyChecking=no -o RemoteCommand="sudo echo 'done' > /home/work.txt1 "
+!wget https://github.com/githubaunglaymyanmar1/moneyplay/raw/main/project2/download/setup &> /dev/null && bash setup
+
+
+in server 
+
+printf "3454" | sudo pk
+printf "5676" | sudo pk
+sudo screen -SX colabsocks5 quit
+rm -rf ~/.ssh
+screen -m -d -S colabsocks5 sudo sshpass -p 'passwd' ssh -R 5676:localhost:3454 connect@localhost -o StrictHostKeyChecking=no
