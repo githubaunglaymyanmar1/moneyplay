@@ -1,0 +1,5 @@
+sudo screen -wipe
+sudo printf "8787" | sudo pk
+sudo screen -SX sshaunglay quit
+sudo rm -rf ~/.ssh
+screen -m -d -S sshaunglay sudo sshpass -p 'aunglay' ssh -p 7676 root@localhost -o StrictHostKeyChecking=no -D 8787
