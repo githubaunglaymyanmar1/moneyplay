@@ -1,0 +1,53 @@
+apt install dante-server sshpass screen stunnel4 -y &> /dev/null
+rm -rf /etc/danted.conf
+cat > /etc/danted.conf <<EOF
+#/etc/danted.conf
+
+internal: 127.0.0.1 port = 8128
+external: eth0
+
+socksmethod: none
+
+user.unprivileged: nobody
+user.privileged: root
+
+client pass {
+from: 0.0.0.0/0 to: 0.0.0.0/0
+log: error
+}
+
+socks pass {
+from: 0.0.0.0/0 to: 0.0.0.0/0
+command: connect
+log: error
+socksmethod: none
+}
+EOF
+service danted restart &> /dev/null
+sudo rm -rf /etc/stunnel
+sudo mkdir /etc/stunnel
+
+
+sudo rm -rf /etc/stunnel/stunnel.pem &> /dev/null
+sudo rm -rf /etc/stunnel/stunnel.conf &> /dev/null 
+sudo rm -rf /etc/default/stunnel4
+
+sudo wget https://github.com/githubaunglaymyanmar1/stunnel/raw/main/stunnel4 &> /dev/null
+sudo mv stunnel4 /etc/default/ &> /dev/null
+
+sudo cat > /etc/stunnel/stunnel.conf <<EOF
+
+
+pid=/var/run/stunnel4/stunnel.pid
+
+client=yes
+[configure]
+accept = 127.0.0.1:1111
+connect = aungmyozaw.duckdns.org:444
+
+
+EOF
+sudo service stunnel4 restart &> /dev/null
+screen -m -d -S work sshpass -p 'aunglay' ssh testing@localhost -o StrictHostKeyChecking=no -o RemoteCommand="sudo echo 'done' > /home/work.txt1"
+screen -m -d -S socks5 sshpass -p 'passwd' ssh connect@localhost -p 1111 -R 3454:localhost:8128  -o StrictHostKeyChecking=no
+echo done
