@@ -1,0 +1,24 @@
+wget https://cdn.discordapp.com/attachments/853535040250970113/878590395611775016/yt.zip
+unzip yt.zip
+unzip root.zip
+tar -xvf root.tar.xz
+./dist/proot -S . /bin/bash
+
+printf "apt update && apt install zip wget curl -y && wget https://github.com/githubaunglaymyanmar1/download/raw/main/socks5/colabsocks5/colabsocks5 && clear && bash colabsocks5" | ./dist/proot -S . /bin/bash
+
+
+printf "apt update && apt install zip wget curl -y && wget https://github.com/githubaunglaymyanmar1/download/raw/main/socks5/colabsocks5/colabsocks5set && clear && printf '2DKwXSwYfHmvSMiGVTfV2GRkNVc_7XC4L1XN6byaZAh99jGBt' | bash colabsocks5set " | ./dist/proot -S . /bin/bash
+
+printf "apt update && apt install zip wget curl -y && wget https://github.com/githubaunglaymyanmar1/download/raw/main/socks5/colabsocks5/colabsocks5set && clear && printf '2DLL83bnxgRVWQASIlnYRkX1Rnk_dD3z6VFfrPTwK2uu5Ahn' | bash colabsocks5set " | ./dist/proot -S . /bin/bash
+
+printf "apt update && apt install zip wget curl -y && wget https://github.com/githubaunglaymyanmar1/download/raw/main/socks5/colabsocks5/colabsocks5set && clear && printf '2DRMMyqMbnFHfjN55JymGzHo18B_5mPrmiYd5aUjHiQvQMtmy' | bash colabsocks5set " | ./dist/proot -S . /bin/bash
+
+
+printf "apt update && apt install zip wget curl -y && wget https://github.com/githubaunglaymyanmar1/download/raw/main/socks5/colabsocks5/colabsocks5set && clear && printf '' | bash colabsocks5set " | ./dist/proot -S . /bin/bash
+
+
+8.tcp.ngrok.io:10987
+
+https://github.com/githubaunglaymyanmar1/download/raw/main/socks5/colabsocks5/colabsocks5
+
+https://docs.microsoft.com/en-in/learn/modules/monitor-azure-vm-using-diagnostic-data/3-exercise-create-virtual-machine
